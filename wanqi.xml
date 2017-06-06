@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scenario xmlns="http://www.omnigroup.com/namespace/OmniPlan/v2" xmlns:opns="http://www.omnigroup.com/namespace/OmniPlan/v2" id="hqbWfKMKe_U">
+  <start-date>2017-05-26T16:00:00.000Z</start-date>
+  <prototype-task>
+    <task id="t-2">
+      <title>任务 1</title>
+      <effort>28800</effort>
+    </task>
+  </prototype-task>
+  <prototype-task>
+    <task id="t-3">
+      <title>里程碑 1</title>
+      <type>milestone</type>
+    </task>
+  </prototype-task>
+  <prototype-task>
+    <task id="t-4">
+      <title>群组 1</title>
+      <type>group</type>
+    </task>
+  </prototype-task>
+  <prototype-resource>
+    <resource id="r-2">
+      <name>资源 1</name>
+      <type>Staff</type>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-3">
+      <name>设备 1</name>
+      <type>Equipment</type>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-4">
+      <name>素材 1</name>
+      <type>Material</type>
+      <units-available>0</units-available>
+      <efficiency>0</efficiency>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-5">
+      <name>群组 1</name>
+      <type>Group</type>
+    </resource>
+  </prototype-resource>
+  <top-resource idref="r-1"/>
+  <resource id="r-1">
+    <type>Group</type>
+    <child-resource idref="r1"/>
+    <child-resource idref="r2"/>
+    <child-resource idref="r3"/>
+    <child-resource idref="r4"/>
+    <child-resource idref="r5"/>
+  </resource>
+  <resource id="r1">
+    <name>秦斯</name>
+    <type>Staff</type>
+  </resource>
+  <resource id="r2">
+    <name>耿畅</name>
+    <type>Staff</type>
+  </resource>
+  <resource id="r3">
+    <name>秋杰</name>
+    <type>Staff</type>
+  </resource>
+  <resource id="r4">
+    <name>丽华</name>
+    <type>Staff</type>
+  </resource>
+  <resource id="r5">
+    <name>婉琦</name>
+    <type>Staff</type>
+  </resource>
+  <top-task idref="t-1"/>
+  <task id="t-1">
+    <type>group</type>
+    <child-task idref="t1"/>
+    <child-task idref="t21"/>
+    <child-task idref="t27"/>
+    <child-task idref="t41"/>
+  </task>
+  <task id="t1">
+    <title>0601</title>
+    <type>group</type>
+    <child-task idref="t3"/>
+    <child-task idref="t6"/>
+    <child-task idref="t9"/>
+    <child-task idref="t10"/>
+    <child-task idref="t17"/>
+    <child-task idref="t18"/>
+    <child-task idref="t11"/>
+  </task>
+  <task id="t3">
+    <title>运营平台需求--需优先实现部分需求</title>
+    <effort>28800</effort>
+    <start-constraint-date>2017-06-07T00:00:00.000Z</start-constraint-date>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2017-06-07T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t6">
+    <title>分期遗留小秘书</title>
+    <effort>86400</effort>
+    <start-constraint-date>2017-06-05T00:15:00.000Z</start-constraint-date>
+    <assignment idref="r2"/>
+    <start-no-earlier-than>2017-06-05T00:15:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t9">
+    <title>P2P存管交易</title>
+    <effort>86400</effort>
+    <start-constraint-date>2017-06-02T00:00:00.000Z</start-constraint-date>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2017-06-02T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t10">
+    <title>P2P存管整体</title>
+    <effort>57600</effort>
+    <start-constraint-date>2017-06-15T00:00:00.000Z</start-constraint-date>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2017-06-15T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t11">
+    <title>老协议遗留问题（＋贷出二期＋协议明文）</title>
+    <type>group</type>
+    <start-constraint-date>2017-05-31T00:00:00.000Z</start-constraint-date>
+    <child-task idref="t12"/>
+    <child-task idref="t13"/>
+    <child-task idref="t14"/>
+    <child-task idref="t15"/>
+    <start-no-earlier-than>2017-05-31T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t12">
+    <title>老协议测试－准入</title>
+    <effort>14400</effort>
+    <start-constraint-date>2017-06-06T00:15:00.000Z</start-constraint-date>
+    <assignment idref="r3"/>
+    <start-no-earlier-than>2017-06-06T00:15:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t13">
+    <title>老协议测试－case</title>
+    <effort>28800</effort>
+    <start-constraint-date>2017-06-05T00:00:00.000Z</start-constraint-date>
+    <assignment idref="r3"/>
+    <start-no-earlier-than>2017-06-05T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t14">
+    <title>老协议测试</title>
+    <effort>86400</effort>
+    <start-constraint-date>2017-06-06T06:00:00.000Z</start-constraint-date>
+    <assignment idref="r3"/>
+    <start-no-earlier-than>2017-06-06T06:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t15">
+    <title>老协议上线跟进</title>
+    <effort>28800</effort>
+    <start-constraint-date>2017-06-13T00:00:00.000Z</start-constraint-date>
+    <assignment idref="r3"/>
+    <start-no-earlier-than>2017-06-13T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t17">
+    <title>91.【风控】借入贷出明细增加定向出借标记</title>
+    <effort>27900</effort>
+    <start-constraint-date>2017-06-05T00:00:00.000Z</start-constraint-date>
+    <assignment idref="r4"/>
+    <start-no-earlier-than>2017-06-05T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t18">
+    <title>30.【诉讼后台】更新诉讼文件（成果）</title>
+    <effort>28800</effort>
+    <start-constraint-date>2017-06-08T00:00:00.000Z</start-constraint-date>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2017-06-08T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t20">
+    <title>131.产品状态online改造
+（晓聪）</title>
+    <effort>28800</effort>
+    <start-constraint-date>2017-06-05T00:00:00.000Z</start-constraint-date>
+    <assignment idref="r5"/>
+    <start-no-earlier-than>2017-06-05T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t21">
+    <title>0615</title>
+    <type>group</type>
+    <start-constraint-date>2017-05-31T00:00:00.000Z</start-constraint-date>
+    <child-task idref="t20"/>
+    <child-task idref="t24"/>
+    <child-task idref="t25"/>
+    <child-task idref="t26"/>
+    <child-task idref="t30"/>
+    <child-task idref="t31"/>
+    <child-task idref="t32"/>
+    <child-task idref="t33"/>
+    <child-task idref="t34"/>
+    <child-task idref="t35"/>
+    <child-task idref="t36"/>
+    <child-task idref="t37"/>
+    <child-task idref="t38"/>
+    <start-no-earlier-than>2017-05-31T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t24">
+    <title>107.【诉讼后台】数据查询优化（6/13提测，6/16上线）</title>
+    <effort>57600</effort>
+    <start-constraint-date>2017-06-14T00:15:00.000Z</start-constraint-date>
+    <assignment idref="r4"/>
+    <start-no-earlier-than>2017-06-14T00:15:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t25">
+    <title>36.CRM增加借入借出相关信息展示</title>
+    <effort>57600</effort>
+    <start-constraint-date>2017-06-19T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2017-06-19T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t26">
+    <title>126.打赏债权人待发布功能调整（6/8提测，6/15上线）</title>
+    <effort>57600</effort>
+    <start-constraint-date>2017-06-09T00:00:00.000Z</start-constraint-date>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2017-06-09T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t27">
+    <title>288</title>
+    <type>group</type>
+    <start-constraint-date>2017-05-31T00:00:00.000Z</start-constraint-date>
+    <child-task idref="t28"/>
+    <child-task idref="t43"/>
+    <child-task idref="t44"/>
+    <start-no-earlier-than>2017-05-31T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t28">
+    <title>40.【APP】企业版_员工管理增加增删查功能（6/7提测，6/13可上线）</title>
+    <effort>28800</effort>
+    <start-constraint-date>2017-06-08T00:15:00.000Z</start-constraint-date>
+    <assignment idref="r4"/>
+    <start-no-earlier-than>2017-06-08T00:15:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t30">
+    <title>106.【诉讼后台】诉讼时效中断（6/9提测，6/15上线）</title>
+    <effort>28800</effort>
+    <start-constraint-date>2017-06-12T00:15:00.000Z</start-constraint-date>
+    <assignment idref="r4"/>
+    <start-no-earlier-than>2017-06-12T00:15:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t31">
+    <title>47.提供展期还款类型-人人催配合需求</title>
+    <effort>28800</effort>
+    <start-constraint-date>2017-06-20T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2017-06-20T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t32">
+    <title>118.【诉讼后台】后台批量取消委托诉讼（6/8提测，6/13上线）</title>
+    <effort>28800</effort>
+    <start-constraint-date>2017-06-09T00:00:00.000Z</start-constraint-date>
+    <assignment idref="r4"/>
+    <start-no-earlier-than>2017-06-09T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t33">
+    <title>124.还款增加对条件期和减免期查询（6/15提测，6/19上线）</title>
+    <effort>28800</effort>
+    <start-constraint-date>2017-06-16T00:15:00.000Z</start-constraint-date>
+    <assignment idref="r4"/>
+    <start-no-earlier-than>2017-06-16T00:15:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t34">
+    <title>117.债务人还款实时推送需求（6/15提测，6/22上线）</title>
+    <effort>43200</effort>
+    <start-constraint-date>2017-06-19T00:15:00.000Z</start-constraint-date>
+    <assignment idref="r4"/>
+    <start-no-earlier-than>2017-06-19T00:15:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t35">
+    <title>132.feed删除friend&amp;mybank数据库读取</title>
+    <effort>42300</effort>
+    <start-constraint-date>2017-06-06T00:15:00.000Z</start-constraint-date>
+    <assignment idref="r5"/>
+    <start-no-earlier-than>2017-06-06T00:15:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t36">
+    <title>133.rrx-suggestion 读取mybank数据库修改</title>
+    <effort>41400</effort>
+    <start-constraint-date>2017-06-08T00:00:00.000Z</start-constraint-date>
+    <assignment idref="r5"/>
+    <start-no-earlier-than>2017-06-08T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t37">
+    <title>134.tradeHis 读取mybank数据库</title>
+    <effort>41400</effort>
+    <start-constraint-date>2017-06-12T00:15:00.000Z</start-constraint-date>
+    <assignment idref="r5"/>
+    <start-no-earlier-than>2017-06-12T00:15:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t38">
+    <title>102.mybank others接口迁移（6/8上线）</title>
+    <effort>28800</effort>
+    <start-constraint-date>2017-06-06T00:15:00.000Z</start-constraint-date>
+    <assignment idref="r4"/>
+    <start-no-earlier-than>2017-06-06T00:15:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t41">
+    <title>测试技术需求</title>
+    <type>group</type>
+    <start-constraint-date>2017-06-05T00:00:00.000Z</start-constraint-date>
+    <child-task idref="t42"/>
+    <start-no-earlier-than>2017-06-05T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t42">
+    <title>场景自动化</title>
+    <effort>57600</effort>
+    <start-constraint-date>2017-06-13T00:00:00.000Z</start-constraint-date>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2017-06-13T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t43">
+    <title>82.借钱页增加“向机构借款”开关（晓聪6/8提测，6/15可上线）</title>
+    <effort>43200</effort>
+    <start-constraint-date>2017-06-09T00:00:00.000Z</start-constraint-date>
+    <assignment idref="r2"/>
+    <start-no-earlier-than>2017-06-09T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t44">
+    <title>135.授信调用feed接口（6/13提测，6/16上线）</title>
+    <effort>28800</effort>
+    <start-constraint-date>2017-06-14T00:15:00.000Z</start-constraint-date>
+    <assignment idref="r3"/>
+    <start-no-earlier-than>2017-06-14T00:15:00.000Z</start-no-earlier-than>
+  </task>
+  <critical-path root="-1" enabled="false" resources="false">
+    <color r="1" g="0.5" b="0.5"/>
+  </critical-path>
+</scenario>
