@@ -203,6 +203,7 @@ export default function Bar(gt, task) {
 
 		const line_1 = `Duration: ${self.duration} days`;
 		const line_2 = self.task.progress ? `Progress: ${self.task.progress}` : null;
+		const line_3 = self.task.resource ? `Resource: ${self.task.resource}` : null;
 
 		const html = `
 			<div class="details-container">
@@ -210,6 +211,9 @@ export default function Bar(gt, task) {
 				<p>${line_1}</p>
 				${
 					line_2 ? `<p>${line_2}</p>` : ''
+				}
+				${
+					line_3 ? `<p>${line_3}</p>` : ''
 				}
 			</div>
 		`;
