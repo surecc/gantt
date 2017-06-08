@@ -20,6 +20,12 @@
 			fill: tomato;
 		}
 	</style>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="css/frappe_theme.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="css/index.css" media="screen">
+	<link rel="stylesheet" href="css/default.css">
+
 	<script src="node_modules/moment/min/moment.min.js"></script>
 	<script src="node_modules/snapsvg/dist/snap.svg-min.js"></script>
 	<script src="dist/frappe-gantt.js"></script>
@@ -30,6 +36,13 @@
 		<div class="gantt-container">
 			<svg id="gantt" width="400" height="600"></svg>
 		</div>
+		<div class="btn-group mt-1 mx-auto" role="group">
+			<button onclick='changemode()' type="button" class="btn btn-sm btn-secondary">Quarter Day</button>
+          	<button onclick='changemode()' type="button" class="btn btn-sm btn-secondary">Half Day</button>
+          	<button onclick='changemode()' type="button" class="btn btn-sm btn-secondary">Day</button>
+          	<button onclick='changemode()' type="button" class="btn btn-sm btn-secondary active">Week</button>
+          	<button onclick='changemode()' type="button" class="btn btn-sm btn-secondary">Month</button>
+        </div>
 	</div>
 	<script>
 		var names = [
@@ -57,9 +70,9 @@
 		});
 		tasks[1].progress = 0;
 		tasks[1].dependencies = "Task 0"
-		tasks[2].dependencies = "Task 1, Task 3"
+		tasks[2].dependencies = "Task 1"
 		tasks[3].dependencies = "Task 2"
-		tasks[5].dependencies = "Task 4"
+		tasks[5].dependencies = "Task 4, Task 2"
 		tasks[5].custom_class = "bar-milestone";
 
 		tasks[1].resource = "黄婉琦"
@@ -81,6 +94,14 @@
 				console.log(mode);
 			}
 		});
+		function changemode(){
+	        var mode = $(this).text;
+	        console.log(mode);
+	        gantt_chart.change_view_mode(mode);
+	        $btn.parent().find('button').removeClass('active');
+	        $btn.addClass('active');
+		}
+
 		console.log(gantt_chart);
 	</script>
 </body>
